@@ -1,19 +1,18 @@
 questions = [
-    {"question": "الشمس أكبر من الأرض؟", "answer": "صح"},
-    {"question": "الماء يغلي عند 50 درجة مئوية؟", "answer": "خطأ"},
-    {"question": "القطط تحب الحليب؟", "answer": "صح"},
-    {"question": "الأرض مسطحة؟", "answer": "خطأ"}
+    {"question": "The sun is bigger than the earth?", "answer": "true"},
+    {"question": "Water boils at 50 degrees Celsius?", "answer": "false"},
+    {"question": "Do birds fly in the sky?", "answer": "true"},
+    {"question": "Is the earth flat?", "answer": "false"}
 ]
 
-score = 0  
-
+score = 0   
 
 for q in questions:
-    user_answer = input(q["question"] + " (صح/خطأ): ")
+    user_answer = input(q["question"] + " (true/false): ").lower()
     if user_answer == q["answer"]:
-        print("صحيح! ")
+        print("Correct")
         score += 1
     else:
-        print("خطأ! ")
+        print("Wrong")
 
-print(f"\nانتهت اللعبة! مجموع نقاطك: {score}/{len(questions)}")
+print(f"\nThe game is over! Your total score is: {score}/{len(questions)}")  
